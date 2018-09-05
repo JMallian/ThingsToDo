@@ -15,6 +15,7 @@
 		4C2A8E9021408D780086A5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2A8E8E21408D780086A5A2 /* LaunchScreen.storyboard */; };
 		4C2A8E9B21408D790086A5A2 /* ThingsToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A8E9A21408D790086A5A2 /* ThingsToDoTests.swift */; };
 		4C2A8EA621408D790086A5A2 /* ThingsToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A8EA521408D790086A5A2 /* ThingsToDoUITests.swift */; };
+		4C2A8EB421408EC80086A5A2 /* DisplayTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A8EB321408EC80086A5A2 /* DisplayTasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4C2A8EA121408D790086A5A2 /* ThingsToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThingsToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2A8EA521408D790086A5A2 /* ThingsToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThingsToDoUITests.swift; sourceTree = "<group>"; };
 		4C2A8EA721408D790086A5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C2A8EB321408EC80086A5A2 /* DisplayTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				4C2A8E8221408D6F0086A5A2 /* AppDelegate.swift */,
+				4C2A8EB321408EC80086A5A2 /* DisplayTasksViewController.swift */,
 				4C2A8E8421408D6F0086A5A2 /* ViewController.swift */,
 				4C2A8E8621408D6F0086A5A2 /* Main.storyboard */,
 				4C2A8E8C21408D780086A5A2 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2A8EB421408EC80086A5A2 /* DisplayTasksViewController.swift in Sources */,
 				4C2A8E8521408D6F0086A5A2 /* ViewController.swift in Sources */,
 				4C2A8E8321408D6F0086A5A2 /* AppDelegate.swift in Sources */,
 				4C2A8E8B21408D6F0086A5A2 /* ThingsToDo.xcdatamodeld in Sources */,
