@@ -42,7 +42,7 @@
         <!--Add Task View Controller-->
         <scene sceneID="GNs-MQ-tDm">
             <objects>
-                <viewController id="D7E-rk-n6m" customClass="AddTaskViewController" customModule="ThingsToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddTaskVC" id="D7E-rk-n6m" customClass="AddTaskViewController" customModule="ThingsToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8eU-jy-ono">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,8 +54,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BJ-OD-PeH">
-                                <rect key="frame" x="143" y="286" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9A-OE-WaV">
+                                <rect key="frame" x="166" y="388" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -65,11 +65,18 @@
                                 <rect key="frame" x="156" y="305" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Task"/>
+                                <connections>
+                                    <action selector="addTaskButtonPressed:" destination="D7E-rk-n6m" eventType="touchUpInside" id="7dj-qL-m1y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jn1-e9-Tf1"/>
                     </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="p9A-OE-WaV" id="fNV-bs-T5W"/>
+                        <outlet property="titleField" destination="UXs-du-pYG" id="WUF-wB-d7N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usC-sS-wZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

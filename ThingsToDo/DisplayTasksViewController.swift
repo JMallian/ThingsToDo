@@ -10,7 +10,7 @@ import UIKit
 
 class DisplayTasksViewController: UITableViewController {
     //temporary
-    var data = TasksStorage.storage
+    //var data = TasksStorage.storage
     
     override func viewDidLoad() {
         let task1 = Task(title: "Make an App")
@@ -18,41 +18,49 @@ class DisplayTasksViewController: UITableViewController {
         let task3 = Task(title: "Walk")
         let task4 = Task(title: "Play Alien Isolation")
         let task5 = Task(title: "Prepare Coffee")
-        data.append(task1)
-        data.append(task2)
-        data.append(task3)
-        data.append(task4)
-        data.append(task5)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        TasksStorage.storage.append(task1)
+        TasksStorage.storage.append(task2)
+        TasksStorage.storage.append(task3)
+        TasksStorage.storage.append(task4)
+        TasksStorage.storage.append(task5)
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        print("viewWillAppear called")
+    }
+    
     @objc func addButtonTapped() {
-        //go to another ViewController to create a task
+        let viewController: AddTaskViewController
+        viewController = storyboard?.instantiateViewController(withIdentifier: "AddTaskVC") as! AddTaskViewController
+        //viewController.data = data
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     //MARK: datasource functions
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return TasksStorage.storage.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") 
-        cell?.textLabel?.text = data[indexPath.row].title
+        cell?.textLabel?.text = TasksStorage.storage[indexPath.row].title
         return cell!
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
+    //this is not neccessary to be able to delete from a table view
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        return true
+//    }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             print("delete was pressed")
-            data.remove(at: indexPath.row)
+            TasksStorage.storage.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }
