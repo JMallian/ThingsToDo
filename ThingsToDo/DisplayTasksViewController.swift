@@ -10,15 +10,14 @@ import UIKit
 
 class DisplayTasksViewController: UITableViewController {
     //temporary
-    var data = [Task]()
-    var task1 = Task(title: "Make an App", description: "just work on a simple app to get better at making apps", priority: .high)
-    var task2 = Task(title: "Read for 30 Minutes", description: "pretty self-explanatory", priority: .normal)
-    var task3 = Task(title: "Walk", description: "gotta get a nice walk in everyday", priority: .normal)
-    var task4 = Task(title: "Play Alien Isolation", description: "try not to die!", priority: .normal)
-    var task5 = Task(title: "Prepare Coffee", description: "gotta make my ice coffee to enjoy at work tomorrow", priority: .normal)
+    var data = TasksStorage.storage
     
     override func viewDidLoad() {
-        //temporary
+        let task1 = Task(title: "Make an App", description: "just work on a simple app to get better at making apps", priority: .high)
+        let task2 = Task(title: "Read for 30 Minutes", description: "pretty self-explanatory", priority: .normal)
+        let task3 = Task(title: "Walk", description: "gotta get a nice walk in everyday", priority: .normal)
+        let task4 = Task(title: "Play Alien Isolation", description: "try not to die!", priority: .normal)
+        let task5 = Task(title: "Prepare Coffee", description: "gotta make my ice coffee to enjoy at work tomorrow", priority: .normal)
         data.append(task1)
         data.append(task2)
         data.append(task3)
@@ -41,6 +40,25 @@ class DisplayTasksViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") 
+        cell?.textLabel?.text = data[indexPath.row].title
+        return cell!
     }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("delete was pressed")
+            data.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
+    
+    //MARK: delegate functions
+
 }
+
+
