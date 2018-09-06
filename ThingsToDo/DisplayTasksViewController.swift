@@ -13,11 +13,11 @@ class DisplayTasksViewController: UITableViewController {
     var data = TasksStorage.storage
     
     override func viewDidLoad() {
-        let task1 = Task(title: "Make an App", description: "just work on a simple app to get better at making apps", priority: .high)
-        let task2 = Task(title: "Read for 30 Minutes", description: "pretty self-explanatory", priority: .normal)
-        let task3 = Task(title: "Walk", description: "gotta get a nice walk in everyday", priority: .normal)
-        let task4 = Task(title: "Play Alien Isolation", description: "try not to die!", priority: .normal)
-        let task5 = Task(title: "Prepare Coffee", description: "gotta make my ice coffee to enjoy at work tomorrow", priority: .normal)
+        let task1 = Task(title: "Make an App")
+        let task2 = Task(title: "Read for 30 Minutes")
+        let task3 = Task(title: "Walk")
+        let task4 = Task(title: "Play Alien Isolation")
+        let task5 = Task(title: "Prepare Coffee")
         data.append(task1)
         data.append(task2)
         data.append(task3)

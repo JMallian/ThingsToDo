@@ -15,12 +15,12 @@ enum Priority {
 
 class Task {
     var title: String
-    var description: String
-    var priority: Priority
+//    var description: String
+//    var priority: Priority
     
-    init(title: String, description: String, priority: Priority) {
+    init(title: String) {
         self.title = title
-        self.description = description
-        self.priority = priority
+//        self.description = description
+//        self.priority = priority
     }
 }

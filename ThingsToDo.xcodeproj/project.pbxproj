@@ -18,6 +18,7 @@
 		4C2A8EB421408EC80086A5A2 /* DisplayTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A8EB321408EC80086A5A2 /* DisplayTasksViewController.swift */; };
 		4C2A8EB6214094920086A5A2 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A8EB5214094920086A5A2 /* Task.swift */; };
 		4C2A8EB82140A84F0086A5A2 /* TasksStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A8EB72140A84F0086A5A2 /* TasksStorage.swift */; };
+		4C2A8EBA2140AB3F0086A5A2 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A8EB92140AB3F0086A5A2 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		4C2A8EB321408EC80086A5A2 /* DisplayTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTasksViewController.swift; sourceTree = "<group>"; };
 		4C2A8EB5214094920086A5A2 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		4C2A8EB72140A84F0086A5A2 /* TasksStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksStorage.swift; sourceTree = "<group>"; };
+		4C2A8EB92140AB3F0086A5A2 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				4C2A8E8221408D6F0086A5A2 /* AppDelegate.swift */,
 				4C2A8EB321408EC80086A5A2 /* DisplayTasksViewController.swift */,
+				4C2A8EB92140AB3F0086A5A2 /* AddTaskViewController.swift */,
 				4C2A8E8421408D6F0086A5A2 /* ViewController.swift */,
 				4C2A8EB5214094920086A5A2 /* Task.swift */,
 				4C2A8EB72140A84F0086A5A2 /* TasksStorage.swift */,
@@ -274,6 +277,7 @@
 				4C2A8EB6214094920086A5A2 /* Task.swift in Sources */,
 				4C2A8E8321408D6F0086A5A2 /* AppDelegate.swift in Sources */,
 				4C2A8E8B21408D6F0086A5A2 /* ThingsToDo.xcdatamodeld in Sources */,
+				4C2A8EBA2140AB3F0086A5A2 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
