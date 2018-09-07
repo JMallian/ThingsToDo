@@ -67,40 +67,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-du-pYG">
-                                <rect key="frame" x="139" y="229" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UXs-du-pYG">
+                                <rect key="frame" x="0.0" y="170" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aTx-JF-qd8"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9A-OE-WaV">
-                                <rect key="frame" x="166" y="388" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9A-OE-WaV">
+                                <rect key="frame" x="0.0" y="363" width="375" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="9NI-Lu-ViS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-qd-qqT">
-                                <rect key="frame" x="156" y="305" width="63" height="30"/>
+                                <rect key="frame" x="139" y="396" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Task"/>
                                 <connections>
                                     <action selector="addTaskButtonPressed:" destination="D7E-rk-n6m" eventType="touchUpInside" id="7dj-qL-m1y"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter A Description (optional)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qT2-ic-qn7">
+                                <rect key="frame" x="0.0" y="200" width="375" height="68"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="2hU-uR-iuJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpe-bm-2zx">
+                                <rect key="frame" x="211" y="324" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task Is A Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybi-tm-QgL">
+                                <rect key="frame" x="32" y="323" width="170" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UXs-du-pYG" firstAttribute="top" secondItem="jn1-e9-Tf1" secondAttribute="top" constant="150" id="0O1-Uf-oNi"/>
+                            <constraint firstAttribute="trailing" secondItem="p9A-OE-WaV" secondAttribute="trailing" id="3Yn-mD-hC5"/>
+                            <constraint firstItem="p9A-OE-WaV" firstAttribute="leading" secondItem="8eU-jy-ono" secondAttribute="leading" id="8Ni-Dn-BJg"/>
+                            <constraint firstItem="jn1-e9-Tf1" firstAttribute="trailing" secondItem="UXs-du-pYG" secondAttribute="trailing" id="RR0-S1-wsY"/>
+                            <constraint firstItem="UXs-du-pYG" firstAttribute="leading" secondItem="jn1-e9-Tf1" secondAttribute="leading" id="dGZ-z0-ncI"/>
+                            <constraint firstItem="qT2-ic-qn7" firstAttribute="top" secondItem="UXs-du-pYG" secondAttribute="bottom" id="fsS-bk-TfY"/>
+                            <constraint firstAttribute="bottom" secondItem="p9A-OE-WaV" secondAttribute="bottom" constant="279" id="q5A-hR-6cq"/>
+                            <constraint firstItem="qT2-ic-qn7" firstAttribute="leading" secondItem="jn1-e9-Tf1" secondAttribute="leading" id="sAe-q4-9Eh"/>
+                            <constraint firstItem="jn1-e9-Tf1" firstAttribute="trailing" secondItem="qT2-ic-qn7" secondAttribute="trailing" id="x8G-y3-dRq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jn1-e9-Tf1"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionTextView" destination="qT2-ic-qn7" id="lCN-6B-Nro"/>
                         <outlet property="displayLabel" destination="p9A-OE-WaV" id="fNV-bs-T5W"/>
+                        <outlet property="prioritySwitch" destination="Cpe-bm-2zx" id="H6Z-DK-w0j"/>
                         <outlet property="titleField" destination="UXs-du-pYG" id="WUF-wB-d7N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="usC-sS-wZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="-338"/>
+            <point key="canvasLocation" x="1428" y="-338.68065967016497"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mvr-jI-byN">
