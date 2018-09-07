@@ -20,8 +20,9 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func addTaskButtonPressed(_ sender: Any) {
-        guard let title = titleField.text else {
+        guard let title = titleField.text, title != "" else {
             displayLabel.text = "Please enter a title for your task."
+            print("text not entered")
             return
         }
         let newTask = Task(title: title)
@@ -29,9 +30,13 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         print("storage now has \(TasksStorage.storage.count) items")
     }
     
-    //TODO: implement method to dismiss keyboard when Return is pressed
+    //MARK: UITextFieldDelegate methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
     }
 }
