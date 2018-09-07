@@ -9,10 +9,15 @@
 //TODO: placeholder text in textfield that autoclears
 //TODO: add UITextField and UISwitch to fill out 3 fields of a tasks
 import UIKit
-class AddTaskViewController: UIViewController {
+class AddTaskViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var displayLabel: UILabel!
     //var data: [Task]?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.titleField.delegate = self
+    }
     
     @IBAction func addTaskButtonPressed(_ sender: Any) {
         guard let title = titleField.text else {
@@ -25,6 +30,8 @@ class AddTaskViewController: UIViewController {
     }
     
     //TODO: implement method to dismiss keyboard when Return is pressed
-    
-    //TODO: figure out why previously usage of TasksStorage (data = TasksStorage in DisplayTaksViewController) did not do what I thought it would do
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
