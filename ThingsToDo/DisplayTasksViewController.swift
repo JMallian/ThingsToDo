@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+//TODO: model to view a task should open when task is clicked
+//TODO: should be able to rearrange tasks
 class DisplayTasksViewController: UITableViewController {
     //temporary
     //var data = TasksStorage.storage
@@ -47,9 +48,13 @@ class DisplayTasksViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") 
-        cell?.textLabel?.text = TasksStorage.storage[indexPath.row].title
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") as! TaskCell
+        cell.titleLable.text = TasksStorage.storage[indexPath.row].title
+//        if TasksStorage.storage[indexPath.row].priority == .high {
+//            cell.priorityLabel.text = "High Priority"
+//            cell.backgroundColor = .red
+//        }
+        return cell
     }
     
     //this is not neccessary to be able to delete from a table view
@@ -69,4 +74,8 @@ class DisplayTasksViewController: UITableViewController {
 
 }
 
+class TaskCell: UITableViewCell {
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var priorityLabel: UILabel!
+}
 

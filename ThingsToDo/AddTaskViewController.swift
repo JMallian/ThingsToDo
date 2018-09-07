@@ -5,7 +5,9 @@
 //  Created by Jessica Mallian on 9/5/18.
 //  Copyright © 2018 Jessica Mallian. All rights reserved.
 //
-
+//TODO: implement method to dismiss keyboard when Return is pressed
+//TODO: placeholder text in textfield that autoclears
+//TODO: add UITextField and UISwitch to fill out 3 fields of a tasks
 import UIKit
 class AddTaskViewController: UIViewController {
     @IBOutlet weak var titleField: UITextField!

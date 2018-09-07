@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//TODO: implement description and priority again
 enum Priority {
     case high
     case normal
